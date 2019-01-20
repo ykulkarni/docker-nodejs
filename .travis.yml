@@ -1,0 +1,10 @@
+sudo :required
+services:
+  - docker
+
+
+before_install:
+  - docker build -t ykulkarni:coket-nodejs -f Dockerfile.dev .
+
+script:
+  - docker run ykulkarni:coket-nodejs npm run test -- --coverage
