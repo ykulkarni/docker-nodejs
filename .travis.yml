@@ -4,7 +4,7 @@ services:
 
 
 before_install:
-  - docker build -t ykulkarni:coket-nodejs -f Dockerfile.dev .
+  - docker build -t ykulkarni/docker-nodejs -f Dockerfile.dev .
 
 script:
-  - docker run ykulkarni:coket-nodejs npm run test -- --coverage
+  - docker run ykulkarni/docker-nodejs npm run test -- --coverage
